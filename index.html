@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Management Interface</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="search-bar">
+    <label for="search">Search:</label>
+    <input type="text" id="search" placeholder="Search...">
+    <button onclick="search()">Search</button>
+  </div>
+
+  <table id="userTable">
+    <thead>
+      <tr>
+        <th><input type="checkbox" id="selectAll" onclick="selectAll()"></th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <!-- Add more columns as needed -->
+        <th>Actions</th>
+      </tr>
+      
+    </thead>
+    <tbody id="tableBody"></tbody>
+  </table>
+
+  <div class="pagination">
+    <button class="first-page" onclick="navigate('first')">First</button>
+    <button class="previous-page" onclick="navigate('previous')">Previous</button>
+    <span id="currentPage">Page 1</span>
+    <button class="next-page" onclick="navigate('next')">Next</button>
+    <button class="last-page" onclick="navigate('last')">Last</button>
+  </div>
+
+  <button onclick="deleteSelected()">Delete Selected</button>
+  <script src="script.js">
+  </script>
+  </body>
+  </html>
